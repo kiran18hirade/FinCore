@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Loans - CreditFlow</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        CreditFlow
+    </div>
+
+
+    <nav>
+
+        <a href="../index.html">
+            Dashboard
+        </a>
+
+        <a href="registration.html">
+            Registration
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="loans.html"
+           class="active">
+            Loans
+        </a>
+
+        <a href="repayments.html">
+            Repayments
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>
+                Loan Applications
+            </h1>
+
+            <p>
+                Manage loan applications and
+                approval decisions.
+            </p>
+
+        </div>
+
+
+        <a href="loan-application.html"
+           class="primary-button">
+
+            + New Loan Application
+
+        </a>
+
+    </div>
+
+
+    <div class="loan-filters">
+
+        <button
+            class="filter-button active"
+            data-filter="ALL">
+            All
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="APPROVED">
+            Approved
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="REJECTED">
+            Rejected
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="PENDING">
+            Pending
+        </button>
+
+    </div>
+
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Application</th>
+
+                    <th>Customer</th>
+
+                    <th>Loan Type</th>
+
+                    <th>Amount</th>
+
+                    <th>Credit Score</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="applicationTable">
+
+                <tr>
+
+                    <td colspan="7"
+                        class="loading">
+
+                        Loading applications...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/loans.js"></script>
+
+</body>
+
+</html>

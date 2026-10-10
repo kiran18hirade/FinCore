@@ -1,0 +1,12 @@
+UNIFIED BANK MANAGEMENT SYSTEM - QUICK START
+
+1. Keep your two old databases unchanged. This project uses a NEW database named unified_bank_management.
+2. In MySQL Workbench run database/01_schema.sql, then database/02_procedures_views.sql, then database/03_seed.sql.
+3. Set DB_PASSWORD in your environment. Do not paste your real password into source code.
+4. From backend/java run: mvn spring-boot:run
+5. Open http://localhost:8080/api/health. Expect status UP and database CONNECTED.
+6. Start VS Code Live Server from frontend/index.html.
+7. Register a customer from Registration; a savings account with zero balance is created automatically.
+8. Open Accounts, enter the returned customer ID, then use the account ID in Transactions.
+
+Never run a DROP TABLE script against your old databases. This is a learning project and must not be used for real money or real customer data.

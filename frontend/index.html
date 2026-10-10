@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Bank Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header class="navbar">
+
+    <div class="logo">
+        Unified Bank
+    </div>
+
+    <nav>
+
+        <a href="../index.html" class="active">
+            Dashboard
+        </a>
+
+        <a href="pages/registration.html">
+            Registration
+        </a>
+
+        <a href="pages/customers.html">
+            Customers
+        </a>
+        <a href="pages/accounts.html">Accounts</a>
+        <a href="pages/transactions.html">Transactions</a>
+
+        <a href="pages/loans.html">
+            Loans
+        </a>
+
+        <a href="pages/repayments.html">
+            Repayments
+        </a>
+
+    </nav>
+
+</header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>Bank Management System</h1>
+
+                <p>
+                    Accounts, Transactions & Loan Services
+                </p>
+
+                <p class="description">
+                    Manage customer accounts, deposits, withdrawals, transfers, loans, and repayments in one system.
+                </p>
+
+                <a href="pages/registration.html" class="primary-button">
+                    Start New Application
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="statistics">
+
+            <div class="stat-card">
+                <h3>Customers</h3>
+                <p id="customerCount">Loading...</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Applications</h3>
+                <p id="applicationCount">Loading...</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Approved Loans</h3>
+                <p id="approvedLoanCount">Loading...</p>
+            </div>
+
+        </section>
+
+        <p id="dashboardMessage" class="dashboard-message" role="status" aria-live="polite"></p>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

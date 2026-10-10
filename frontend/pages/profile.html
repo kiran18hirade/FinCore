@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Profile - CreditFlow</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        CreditFlow
+    </div>
+
+    <nav>
+
+        <a href="../index.html">
+            Dashboard
+        </a>
+
+        <a href="registration.html">
+            Registration
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="loans.html" class="active">
+            Loans
+        </a>
+
+        <a href="repayments.html">
+            Repayments
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="form-page">
+
+    <div class="form-container">
+
+        <div class="page-heading">
+
+            <h1>Customer Profile</h1>
+
+            <p>
+                Review customer and loan information.
+            </p>
+
+        </div>
+
+
+        <div class="profile-section">
+
+            <h2>Personal Information</h2>
+
+            <div class="profile-grid">
+
+                <p>
+                    <strong>Customer ID</strong>
+                    <span id="customerId"></span>
+                </p>
+
+                <p>
+                    <strong>Name</strong>
+                    <span id="name"></span>
+                </p>
+
+                <p>
+                    <strong>Email</strong>
+                    <span id="email"></span>
+                </p>
+
+                <p>
+                    <strong>Phone</strong>
+                    <span id="phone"></span>
+                </p>
+
+                <p>
+                    <strong>Employment</strong>
+                    <span id="employment"></span>
+                </p>
+
+                <p>
+                    <strong>Monthly Income</strong>
+                    ₹<span id="income"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-section">
+
+            <h2>Loan Information</h2>
+
+            <div class="profile-grid">
+
+                <p>
+                    <strong>Application ID</strong>
+                    <span id="applicationId"></span>
+                </p>
+
+                <p>
+                    <strong>Loan Product</strong>
+                    <span id="loanType"></span>
+                </p>
+
+                <p>
+                    <strong>Loan Amount</strong>
+                    ₹<span id="loanAmount"></span>
+                </p>
+
+                <p>
+                    <strong>Loan Tenure</strong>
+                    <span id="loanTenure"></span> months
+                </p>
+
+                <p>
+                    <strong>Loan Purpose</strong>
+                    <span id="loanPurpose"></span>
+                </p>
+
+                <p>
+                    <strong>Existing Monthly EMI</strong>
+                    ₹<span id="existingEmi"></span>
+                </p>
+
+                <p>
+                    <strong>Application Status</strong>
+                    <span id="applicationStatus"></span>
+                </p>
+
+                <p>
+                    <strong>Decision</strong>
+                    <span id="decisionReason"></span>
+                </p>
+
+                <p>
+                    <strong>Monthly EMI</strong>
+                    ₹<span id="monthlyEmi"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-section">
+
+            <h2>Credit Information</h2>
+
+            <div class="profile-grid">
+
+                <p>
+                    <strong>Credit Score</strong>
+                    <span id="creditScore"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <p id="profileMessage" role="status" aria-live="polite"></p>
+
+
+        <div class="button-container">
+
+            <a href="../index.html"
+               class="secondary-button">
+                Dashboard
+            </a>
+
+            <a id="repaymentLink" href="repayments.html"
+               class="primary-button">
+                View Repayments
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+
+</html>

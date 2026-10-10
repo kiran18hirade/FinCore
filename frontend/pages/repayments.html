@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repayments - CreditFlow</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="navbar">
+
+    <div class="logo">
+        CreditFlow
+    </div>
+
+    <nav>
+
+        <a href="../index.html">
+            Dashboard
+        </a>
+
+        <a href="registration.html">
+            Registration
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="loans.html">
+            Loans
+        </a>
+
+        <a href="repayments.html" class="active">
+            Repayments
+        </a>
+
+    </nav>
+
+</header>
+
+<main class="form-page">
+    <div class="form-container">
+        <div class="page-heading">
+            <h1>Repayments</h1>
+            <p>View installments and record a payment.</p>
+        </div>
+
+        <form id="customerSearchForm" class="form-grid">
+            <div class="form-group">
+                <label for="customerId">Customer ID</label>
+                <input type="number" id="customerId" min="1" required>
+            </div>
+            <div class="form-group" style="justify-content: flex-end;">
+                <button type="submit" class="primary-button">Load Repayments</button>
+            </div>
+        </form>
+
+        <p id="repaymentMessage" role="status" aria-live="polite"></p>
+
+        <div class="repayment-table-wrapper">
+            <table class="repayment-table">
+                <thead>
+                    <tr>
+                        <th>Loan</th>
+                        <th>Installment</th>
+                        <th>Due Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="repaymentRows">
+                    <tr><td colspan="6">Enter a customer ID to load repayment schedules.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<script src="../js/api.js"></script>
+<script src="../js/repayments.js"></script>
+</body>
+</html>

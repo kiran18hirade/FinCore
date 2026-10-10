@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Application Result - CreditFlow</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        CreditFlow
+    </div>
+
+
+    <nav>
+
+        <a href="../index.html">
+            Dashboard
+        </a>
+
+        <a href="registration.html">
+            Registration
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="loans.html"
+           class="active">
+            Loans
+        </a>
+
+        <a href="repayments.html">
+            Repayments
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="result-page">
+
+    <div class="result-container">
+
+        <div class="page-heading">
+
+            <h1>
+                Application Result
+            </h1>
+
+            <p>
+                Loan eligibility assessment
+            </p>
+
+        </div>
+
+
+        <div id="resultContainer">
+
+            <p class="loading">
+                Evaluating application...
+            </p>
+
+        </div>
+
+
+        <div class="result-actions">
+
+            <a
+                href="loans.html"
+                class="secondary-button">
+
+                Back to Loans
+
+            </a>
+
+
+            <a
+                id="repaymentButton"
+                href="#"
+                class="primary-button"
+                style="display:none;">
+
+                View Repayment Schedule
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/application-result.js"></script>
+
+</body>
+
+</html>

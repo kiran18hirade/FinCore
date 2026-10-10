@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers - CreditFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">CreditFlow</div>
+
+    <nav>
+
+        <a href="../index.html">Dashboard</a>
+
+        <a href="registration.html">Registration</a>
+
+        <a href="customers.html" class="active">
+            Customers
+        </a>
+
+        <a href="loans.html">
+            Loans
+        </a>
+
+        <a href="repayments.html">
+            Repayments
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <div class="page-header">
+
+        <div>
+            <h1>Customers</h1>
+
+            <p>
+                View and manage all registered customers.
+            </p>
+        </div>
+
+        <a href="registration.html"
+           class="primary-button">
+            + Register Customer
+        </a>
+
+    </div>
+
+
+    <div class="search-bar">
+
+        <input
+            type="text"
+            id="customerSearch"
+            placeholder="Search by name, email or phone..."
+        >
+
+    </div>
+
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>Employment</th>
+
+                    <th>Monthly Income</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="customerTable">
+
+                <tr>
+
+                    <td colspan="7"
+                        class="loading">
+
+                        Loading customers...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/customers.js"></script>
+
+</body>
+
+</html>
