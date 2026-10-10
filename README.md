@@ -1,55 +1,78 @@
-# FinCore
+# FinCore — Full-Stack Banking & Loan Management System
 
-An academic full-stack bank management project built from a clean, separate MySQL database. It combines customer management and loan processing with bank accounts, deposits, withdrawals, transfers, transaction history, and repayment tracking.
+FinCore is a full-stack banking and loan management application developed to bring essential banking operations together in one platform. It combines a web-based frontend, a Java Spring Boot backend, and a MySQL database to manage banking data and loan-related operations.
 
-## Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Java 17, Spring Boot, JDBC
-- Database: MySQL 8+
+The project demonstrates full-stack development, REST API integration, relational database management, and backend application development.
 
-## Important safety note
-This is an educational project, not production banking software. Do not use real customer data or real money. Before production use, implement and independently test authentication/authorization, audit controls, idempotent payments, rate limiting, secrets management, encryption, and operational monitoring.
+## ✨ Features
 
-## Fresh setup (do not import either old database)
-1. Back up your old databases if you need them. This project creates a separate database named `unified_bank_management`; it does not modify `bank_management_system` or `loan_approval_db`.
-2. Open MySQL Workbench and run `database/01_schema.sql`. It creates the new database and tables without dropping existing data.
-3. Run `database/02_procedures_views.sql`.
-4. Run `database/03_seed.sql` to add sample loan products. This seed script does not insert sample customer records.
-5. In `backend/java`, copy `.env.example` values into your environment or set `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD`. Do not commit credentials. The application reads these variables.
-6. Run the backend from `backend/java` using `mvn spring-boot:run` (requires Java 17+ and Maven).
-7. Serve the `frontend` folder using VS Code Live Server or another static file server. Open `frontend/index.html`.
+- **Banking Operations:** Supports core banking workflows provided by the application.
+- **Customer & Account Management:** Manages customer and account-related information.
+- **Transaction Management:** Supports banking transaction workflows implemented in the system.
+- **Loan Management:** Organizes loan-related information and processing.
+- **REST API Integration:** Connects the frontend with backend services.
+- **Database Management:** Uses MySQL for relational data storage.
+- **Web-Based Interface:** Provides a browser-based interface for interacting with the system.
 
-## Environment variables
-- `DB_URL` defaults to `jdbc:mysql://localhost:3306/unified_bank_management?serverTimezone=UTC`
-- `DB_USERNAME` defaults to `root`
-- `DB_PASSWORD` has no hard-coded default; set it in your environment.
-- `SERVER_PORT` defaults to `8080`
+*Feature availability depends on the current implementation.*
 
-## Main API endpoints
-- `GET /api/health`
-- `GET /api/dashboard`
-- `POST /api/customers`
-- `GET /api/customers` and `GET /api/customers/{id}`
-- `GET /api/accounts?customerId={id}`
-- `GET /api/transactions?accountId={id}`
-- `POST /api/accounts/{id}/deposit` with `{ "amount": 1000, "description": "Cash deposit" }`
-- `POST /api/accounts/{id}/withdraw` with `{ "amount": 500, "description": "ATM withdrawal" }`
-- `POST /api/transfers` with `{ "fromAccountId": 1, "toAccountId": 2, "amount": 500, "description": "Transfer" }`
-- `GET /api/loan-products`
-- `POST /api/applications`
-- `GET /api/applications`
-- `GET /api/customers/{id}/repayments`
-- `POST /api/repayments/{scheduleId}/pay`
+## 🛠️ Tech Stack
 
-## Test checklist
-1. Register a test customer and verify an account is created.
-2. Deposit a positive amount and confirm balance and transaction history change.
-3. Attempt a withdrawal above the balance; it must fail without changing the balance.
-4. Transfer between two accounts and verify both balances and both transaction entries.
-5. Apply for a loan and inspect application status, loan record, and repayment schedule.
-6. Try invalid amounts and nonexistent IDs.
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Java, Spring Boot |
+| Database | MySQL |
+| Database Connectivity | JDBC / Spring database integration |
+| Build Tool | Apache Maven |
+| API Architecture | REST APIs |
+| IDE | Visual Studio Code |
 
-## Notes
-- Bank operations use database transactions and row locks for balance updates.
-- The current application is a development baseline. Sensitive endpoints must be protected with authentication and role-based authorization before real use.
-- Use the new schema scripts only for the new database. Never run destructive schema scripts against your old databases.
+
+## 📁 Project Structure
+
+```text
+FinCore/
+├── frontend/
+│   ├── index.html
+│   ├── pages/
+│   ├── js/
+│   └── css/
+├── backend/
+│   └── java/
+│       ├── src/
+│       ├── pom.xml
+│       └── ...
+├── database/
+│   ├── 01_schema.sql
+│   ├── 02_procedures_views.sql
+│   ├── 03_seed.sql
+│   └── 04_demo_queries.sql
+├── .gitignore
+└── README.md
+```
+
+## ⚙️ Prerequisites
+
+Install the following tools:
+
+- Java JDK 17 or the version required by the project
+- Apache Maven
+- MySQL Server
+- MySQL Workbench (optional)
+- Visual Studio Code or another code editor
+- A modern web browser
+
+## 🔮 Future Enhancements
+
+- Secure authentication and role-based access control
+- Enhanced account and transaction workflows
+- Loan eligibility and approval features
+- Transaction history and reporting dashboards
+- Automated unit and integration testing
+- Docker-based deployment
+- API documentation and improved error handling
+
+## 👨‍💻 Author
+
+Kiran Hirade
+
+**FinCore** — A unified platform for banking and loan management.
