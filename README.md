@@ -1,4 +1,4 @@
-# Unified Bank Management System
+# FinCore
 
 An academic full-stack bank management project built from a clean, separate MySQL database. It combines customer management and loan processing with bank accounts, deposits, withdrawals, transfers, transaction history, and repayment tracking.
 
